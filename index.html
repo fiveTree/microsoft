@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_7h6s7am3yxw53ik9.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header id="#header" class="header">
+
+            <div class="logo">
+               <img src="img/microsoft-gray.png" alt="">
+            </div>
+            <ul class="nav">
+                <li><a href="">商店 <i class="iconfont icon-xiajianhao"></i></a></li>
+                <li><a href="">产品 <i class="iconfont icon-xiajianhao"></i></a></li>
+                <li><a href="">支持 </a></li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="在 Microsoft.com 中搜索">
+                <button><i class="iconfont icon-yuyin"></i></button>
+            </div>
+            <div class="login">
+                <a href=""><i class="iconfont icon-1gouwu"></i></a>
+                <a href="">登录</a>
+                <a href=""><i  class="iconfont icon-yuanjiaojuxing1kaobei2"></i></a>
+            </div>
+        </header>
+    </div>
+    <main>
+        <section class="banner">
+            <div>
+                <img src="img/REGNum.jpg" alt="">
+                <img src="img/RETIJO.jpg" alt="">
+            </div>
+
+            <script>
+                $(function () {
+                    var index=0;
+                    function play(){
+
+                        $(".banner img").eq(index).animate({
+                            opacity:"1"
+                        }).siblings($("img")).animate({
+                            opacity:0
+                        });
+                        index==1?index=0:index++;
+                    }
+                    setInterval(play,4000)
+                })
+            </script>
+            <div class="spot">
+                <i class="iconfont icon-dian1"></i>
+                <i  class="iconfont icon-dian"></i>
+            </div>
+        </section>
+        <section class="pics">
+            <dl>
+                <dt><img src="" alt=""></dt>
+                <dd></dd>
+            </dl>
+
+        </section>
+    </main>
+</body>
+</html>

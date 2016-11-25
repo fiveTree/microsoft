@@ -1,0 +1,180 @@
+@charset "utf-8";
+
+*{
+  margin:0;
+  padding: 0;
+}
+body,html{
+  width:100%;
+  height:100%;
+}
+a{
+  text-decoration: none;
+}
+img{
+  border:0 none;
+}
+%center{
+  margin:0 auto;
+}
+%aHover{
+  background: #eee;
+}
+.wrap{
+  width:100%;
+  border-bottom: 1px solid #eee;
+}
+.header{
+  @extend %center;
+  width:93%;
+  height:48px;
+  display: flex;
+  flex-direction: row;
+
+  .logo{
+    display: flex;
+    height:48px;
+    width:150px;
+    justify-content: center;
+    align-items: center;
+    img{
+      display: block;
+      height: 23px;
+    }
+
+  }
+  .nav{
+    display: flex;
+    width:300px;
+    flex: 1;
+    li{
+      text-align: center;
+      height: 48px;
+      width:95px;
+      font-size: 14px;
+      a{
+        display: block;
+        height: 100%;
+       line-height: 48px;
+        &:hover{
+         @extend %aHover
+        }
+      }
+    }
+  }
+  .search{
+    width:280px;
+    height:48px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    input{
+      height:36px;
+      width:278px;
+      border:1px solid #eee;
+      text-indent: 12px;
+      float: left;
+      color:#2F2F2F;
+    }
+    button{
+      position: absolute;
+      right:10px;
+      top:12px;
+      background: none;
+      border:0;
+      i{
+        font-size: 22px;
+      }
+    }
+  }
+
+  .login{
+    height:48px;
+    width:100px;
+    display: flex;
+    text-align: center;
+    line-height: 48px;
+    a{
+      display: block;
+      height:100%;
+      width:48px;
+      &:hover{
+        @extend %aHover;
+      }
+    }
+    a:nth-child(3){
+      display: none;
+    }
+  }
+}
+
+
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  section{
+    width:90%;
+    @extend %center;
+    display: flex;
+  }
+  .banner{
+    position: relative;
+    img{
+      display: block;
+      width:100%;
+      position: absolute;
+
+    }
+    .spot{
+      position: absolute;
+      bottom: 0;
+      left:45%;
+      width:100px;
+      display: flex;
+    }
+  }
+}
+
+
+
+
+
+
+
+//自适应屏幕900px
+@media only screen and (max-width:900px) {
+  .wrap{
+    width: 100%;
+    .header{
+      width: 100%;
+      border-bottom: 1px solid #eee;
+      .search{
+        display: none;
+      }
+    }
+  }
+  main{
+    section{
+      width:100%;
+    }
+  }
+}
+//自适应屏幕600px
+@media only screen and (max-width:600px){
+
+  .wrap .header{
+    justify-content: space-between;
+
+    .nav{
+      display: none;
+    }
+
+    .login{
+      width: 148px;
+      a:nth-child(3){
+        display: block;
+      }
+    }
+  }
+}
