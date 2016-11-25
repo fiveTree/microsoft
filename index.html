@@ -48,23 +48,121 @@
                         }).siblings($("img")).animate({
                             opacity:0
                         });
+                        $(".banner i").eq(index).addClass("active").siblings().removeClass("active")
                         index==1?index=0:index++;
                     }
                     setInterval(play,4000)
                 })
             </script>
             <div class="spot">
-                <i class="iconfont icon-dian1"></i>
-                <i  class="iconfont icon-dian"></i>
+                <i class=""></i>
+                <i  class="active"></i>
             </div>
         </section>
-        <section class="pics">
+        <section class="pics clear">
             <dl>
-                <dt><img src="" alt=""></dt>
-                <dd></dd>
+                <dt><img src="img/REGxSu.jpg" alt=""></dt>
+                <dd>
+                    <h3>Xbox One</h3>
+                    <p>尽情娱乐。购买最新主机。</p>
+                </dd>
+            </dl>
+            <dl>
+                <dt><img src="img/REGxSv.jpg" alt=""></dt>
+                <dd>
+                    <h3>Xbox One</h3>
+                    <p>尽情娱乐。购买最新主机。</p>
+                </dd>
+            </dl>
+            <dl>
+                <dt><img src="img/REHt7g.jpg" alt=""></dt>
+                <dd>
+                    <h3>Xbox One</h3>
+                    <p>尽情娱乐。购买最新主机。</p>
+                </dd>
+            </dl>
+            <dl>
+                <dt><img src="img/RETlkn.jpg" alt=""></dt>
+                <dd>
+                    <h3>Xbox One</h3>
+                    <p>尽情娱乐。购买最新主机。</p>
+                </dd>
             </dl>
 
         </section>
+        <section class="pay">
+            <img src="img/REGKTe.jpg" alt="">
+            <div>
+                <h3>微软官方商城</h3>
+                <p>寻找适合的技术，满足生活、学习、工作和娱乐之所需。</p>
+                <a href="">立即购买 ></a>
+            </div>
+        </section>
+        <section class="pics pics2 clear">
+            <h3>适用于工作地点</h3>
+            <dl>
+                <dt><img src="img/REOLLm.png" alt=""></dt>
+                <dd>
+                    <h3>Xbox One</h3>
+                    <p>尽情娱乐。购买最新主机。</p>
+                </dd>
+            </dl>
+            <dl>
+                <dt><img src="img/REGxSD.png" alt=""></dt>
+                <dd>
+                    <h3>Xbox One</h3>
+                    <p>尽情娱乐。购买最新主机。</p>
+                </dd>
+            </dl>
+            <dl>
+                <dt><img src="img/REGq4G.jpg" alt=""></dt>
+                <dd>
+                    <h3>Xbox One</h3>
+                    <p>尽情娱乐。购买最新主机。</p>
+                </dd>
+            </dl>
+            <dl>
+                <dt><img src="img/REGvhg.jpg" alt=""></dt>
+                <dd>
+                    <h3>Xbox One</h3>
+                    <p>尽情娱乐。购买最新主机。</p>
+                </dd>
+            </dl>
+
+        </section>
+        <section class="banner banner2">
+            <div>
+                <img src="img/REVOOy.jpg" alt="">
+                <img src="img/REXCG2.jpg" alt="">
+                <img src="img/REWePC.jpg" alt="">
+            </div>
+
+            <script>
+                $(function () {
+                    var index=0;
+                    function play(){
+
+                        $(".banner2 img").eq(index).animate({
+                            opacity:"1"
+                        }).siblings($("img")).animate({
+                            opacity:0
+                        });
+                        $(".banner2 i").eq(index).addClass("active").siblings().removeClass("active")
+                        index==$(".banner2 img").length-1?index=0:index++;
+                    }
+                    setInterval(play,4000)
+                })
+            </script>
+            <div class="spot">
+                <i class=""></i>
+                <i  class="active"></i>
+            </div>
+        </section>
     </main>
+    <div class="wrap">
+        <div class="footer">
+
+        </div>
+    </div>
 </body>
 </html>
